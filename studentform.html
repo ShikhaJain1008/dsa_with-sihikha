@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry Form - Student/Employee/Faculty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      min-height: 100vh;
+    }
+
+    .form-wrapper {
+      background: #ffffff;
+      width: 100%;
+      max-width: 750px;
+      padding: 35px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-top: 5px solid #007BFF;
+    }
+
+    .form-wrapper h1 {
+      text-align: center;
+      color: #1e1e2f;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .form-wrapper .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    .form-group { margin-bottom: 18px; }
+
+    .row {
+      display: flex;
+      gap: 20px;
+    }
+    .row .form-group { flex: 1; }
+
+    label {
+      display: block;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #007BFF;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+    }
+
+    textarea { resize: vertical; min-height: 80px; }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .radio-group label, .checkbox-group label {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-submit {
+      background: #007BFF; /* Blue */
+      color: #fff;
+    }
+    .btn-submit:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    .btn-reset {
+      background: #DC3545; /* Red */
+      color: #fff;
+    }
+    .btn-reset:hover {
+      background: #b02a37;
+      transform: translateY(-2px);
+    }
+
+    @media(max-width: 600px){
+      .row { flex-direction: column; gap: 0; }
+      .form-wrapper { padding: 25px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <h1>Entry Form</h1>
+    <p class="subtitle">Student / Employee / Faculty Details</p>
+
+    <form>
+      <!-- Category -->
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">-- Select Category --</option>
+          <option value="Student">Student</option>
+          <option value="Employee">Employee</option>
+          <option value="Faculty">Faculty</option>
+        </select>
+      </div>
+
+      <!-- Name + ID -->
+      <div class="row">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="Enter full name" required>
+        </div>
+        <div class="form-group">
+          <label for="idnum">ID Number</label>
+          <input type="text" id="idnum" placeholder="Roll No. / Emp ID" required>
+        </div>
+      </div>
+
+      <!-- DOB + Age -->
+      <div class="row">
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" placeholder="Age">
+        </div>
+      </div>
+
+      <!-- Gender -->
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <!-- Email + Phone -->
+      <div class="row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="example@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="10-digit number" pattern="[0-9]{10}">
+        </div>
+      </div>
+
+      <!-- Dept/Class -->
+      <div class="form-group">
+        <label for="dept">Department / Class</label>
+        <input type="text" id="dept" placeholder="e.g. Computer Science / Class 10-A">
+      </div>
+
+      <!-- Course + Year -->
+      <div class="row">
+        <div class="form-group">
+          <label for="course">Course / Designation</label>
+          <input type="text" id="course" placeholder="e.g. B.Tech / Professor / Manager">
+        </div>
+        <div class="form-group">
+          <label for="year">Year of Joining / Admission</label>
+          <input type="number" id="year" placeholder="e.g. 2024">
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" placeholder="Enter full address"></textarea>
+      </div>
+
+      <!-- Skills -->
+      <div class="form-group">
+        <label>Qualification / Skills</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="skills" value="Technical"> Technical</label>
+          <label><input type="checkbox" name="skills" value="Communication"> Communication</label>
+          <label><input type="checkbox" name="skills" value="Management"> Management</label>
+          <label><input type="checkbox" name="skills" value="Research"> Research</label>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group">
+        <button type="submit" class="btn btn-submit">Submit</button>
+        <button type="reset" class="btn btn-reset">Reset</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

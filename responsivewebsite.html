@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Solution - Home</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Arial, sans-serif; 
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      margin: 0; 
+      color: #333;
+      scroll-behavior: smooth; /* smooth scroll for #links */
+    }
+
+    /* NAVBAR - FIXED ON TOP */
+    nav {
+      background: #1e3a8a;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex; /* better than float */
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    nav a { 
+      color: white; 
+      text-decoration: none; 
+      margin: 0 12px; 
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 5px;
+    }
+    nav a:hover { 
+      background: #2563eb;
+      color: white;
+    }
+
+    /* HERO / UPPER PORTION ONLY */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      color: #1e3a8a;
+    }
+    .hero h1 { font-size: 40px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; margin-bottom: 25px; }
+    .btn {
+      background: #2563eb; 
+      color: white; 
+      padding: 12px 25px; 
+      border: none; 
+      border-radius: 6px; 
+      cursor: pointer; 
+      font-size: 16px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+    .container { 
+      width: 90%; 
+      max-width: 1000px; 
+      margin: 30px auto; 
+      background: white; 
+      padding: 25px; 
+      border-radius: 12px; 
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+    }
+    .container h2 {
+      color: #1e3a8a;
+      border-bottom: 2px solid #a8edea;
+      padding-bottom: 8px;
+    }
+
+    footer { 
+      text-align: center; 
+      padding: 15px; 
+      background: #1e3a8a; 
+      color: white; 
+      margin-top: 30px; 
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { flex-direction: column; }
+      nav .menu { margin-top: 10px; }
+      nav a { display: inline-block; margin: 5px; }
+      .hero h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <span class="logo">Tech Solution</span>
+  <span class="menu">
+    <a href="index.html">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="register.html">Register</a> <!-- LINK TO SEPARATE PAGE -->
+    <a href="#contact">Contact</a>
+  </span>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <h1>Welcome to Tech Solution</h1>
+  <p>Learn Web Development with HTML, CSS & JavaScript</p>
+  <a href="register.html" class="btn">Join Our Course</a>
+</section>
+
+<!-- SERVICES -->
+<section class="container" id="services">
+  <h2>Our Services</h2>
+  <p>Web Design, App Development, and Tech Training Courses</p>
+</section>
+
+<!-- ABOUT -->
+<section class="container" id="about">
+  <h2>About Us</h2>
+  <p>We provide industry-ready courses to make you job ready in 3 months.</p>
+</section>
+
+<!-- CONTACT -->
+<section class="container" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: info@techsolution.com | Phone: 9876543210</p>
+</section>
+
+ <title>Tech Solution - Registration</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Arial, sans-serif; 
+      background: #e0f7fa; /* Same background */
+      margin: 0; 
+      color: #333;
+    }
+
+    /* SAME NAVBAR */
+    nav {
+      background: #004d40;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    nav .logo { color: white; font-size: 22px; font-weight: bold; }
+    nav .menu { float: right; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; padding: 5px 10px; border-radius: 4px; }
+    nav a:hover, nav a.active { background: #00796b; }
+
+    /* REGISTRATION FORM */
+    .container { 
+      width: 90%; max-width: 650px; margin: 40px auto; 
+      background: white; padding: 30px; border-radius: 12px; 
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+    }
+    .container h2 { color: #004d40; border-bottom: 2px solid #b2dfdb; padding-bottom: 10px; }
+    label { display: block; margin-top: 15px; font-weight: bold; color: #004d40; }
+    input { width: 100%; padding: 10px; margin-top: 5px; border: 2px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+    button { 
+      background: #00796b; color: white; padding: 12px 25px; border: none; border-radius: 6px; 
+      margin-top: 20px; margin-right: 10px; cursor: pointer; font-size: 16px;
+    }
+    button:hover { background: #004d40; }
+    button[type="reset"] { background: #757575; }
+    footer { text-align: center; padding: 15px; background: #004d40; color: white; margin-top: 30px; }
+  </style>
+</head>
+<body>
+
+<!-- SAME NAVBAR -->
+<nav>
+  <span class="logo">Tech Solution</span>
+  <span class="menu">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#about">About</a>
+    <a href="register.html" class="active">Register</a> <!-- HIGHLIGHTED -->
+    <a href="index.html#contact">Contact</a>
+  </span>
+</nav>
+
+<!-- REGISTRATION PAGE CONTENT -->
+<section class="container">
+  <h2>Student Registration Form</h2>
+  
+  <form action="#">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="fullname" placeholder="Enter your name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="9876543210" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male" style="display:inline; font-weight:normal;">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female" style="display:inline; font-weight:normal;">Female</label>
+
+    <button type="submit">Submit Application</button>
+    <button type="reset">Reset Form</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2026 Tech Solution. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galgotias College Of Engineering And Technology</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0A2647;   /* New: Dark Navy */
+      --gold: #FFB703;   /* New: Bright Gold */
+      --bg: #F8F9FA;     /* New: Light BG */
+    }
+
+    body{
+     background-color: var(--bg);
+     font-family: 'Poppins', sans-serif;
+     margin: 0;
+     padding: 0;
+    }
+
+    .logo {
+      display: block;
+      margin: 20px auto;
+      height: 100px;
+      transition: 0.4s ease; /* NEW HOVER */
+    }
+    .logo:hover {
+      transform: rotate(5deg) scale(1.1); /* NEW: Rotate + Zoom */
+    }
+
+   .college-title h1 {
+     text-align: center;
+     font-size: 30px;
+     font-weight: 700;
+     color: var(--navy); /* NEW COLOR */
+     margin-top: 10px;
+     letter-spacing: 1.5px;
+   }
+
+   body{
+     background-color: var(--bg);
+     font-family: 'Poppins', sans-serif;
+     margin: 0;
+     padding: 0;
+   }
+
+   h2 {
+    color: var(--navy); /* NEW COLOR */
+    border-left: 5px solid var(--gold); /* NEW: Thicker Gold Border */
+    margin-bottom: 20px;
+    padding-left: 12px;
+    transition: 0.3s;
+   }
+   h2:hover {
+    padding-left: 18px; /* NEW HOVER: slides right */
+   }
+
+   ul{ margin-left: 20px; }
+   li { margin-bottom: 8px; }
+
+   nav {
+    background-color: var(--navy); /* NEW COLOR */
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* NEW: Shadow */
+   } 
+  
+   nav ul{
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     gap: 40px;
+     display: flex;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+   }
+
+   nav ul li a {
+     color: #ffffff;
+     text-decoration: none;
+     font-weight: 600;
+     padding: 8px 15px;
+     border-radius: 6px;
+     transition: all 0.3s ease; /* NEW: Smooth */
+  }
+
+   nav ul li a:hover {
+     background-color: var(--gold); /* NEW: Gold Hover */
+     color: var(--navy); /* NEW: Navy Text */
+     transform: translateY(-2px); /* NEW: Lift effect */
+     box-shadow: 0 4px 8px rgba(255,183,3,0.4); /* NEW: Glow */
+   }
+
+  .container {
+     padding: 40px;
+     text-align: left;
+     max-width: 900px;
+     margin: 30px auto; /* NEW: Gap between sections */
+     background: #ffffff; /* NEW: Card */
+     border-radius: 12px; /* NEW: Rounded */
+     box-shadow: 0 3px 15px rgba(0,0,0,0.07); /* NEW: Soft Shadow */
+     line-height: 1.7;
+     transition: 0.3s;
+   }
+   .container:hover {
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12); /* NEW HOVER: Lift card */
+   }
+  
+  footer {
+     background-color: var(--navy); /* NEW COLOR */
+     color: #ffffff;
+     text-align: center;
+     padding: 25px;
+     margin-top: 40px;
+  }
+  footer a {
+    color: var(--gold); /* NEW: Gold Links */
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+ </style>
+ </head>
+
+<body>
+  <img src="gcet.jpg" alt="GCET Logo" class="logo">
+  
+  <div class="college-title">
+    <h1>Galgotias College of Engineering and Technology</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="home" class="container">
+    <h2>Welcome to GCET</h2>
+    <p>Welcome to GCET, where we empower future technologists and innovators. Our mission is to provide world-class engineering education that drives research, entrepreneurship, and nation building.</p>
+    <ul>
+      <li><strong>Global Curriculum:</strong> Industry-aligned syllabus with focus on AI, IoT, Cloud, and Full Stack Development.</li>
+      <li><strong>Research Driven:</strong> 50+ research labs and funded projects in collaboration with top tech companies.</li>
+      <li><strong>Student First:</strong> Dedicated placement cell, incubation center, and 40+ technical clubs for holistic growth.</li>
+    </ul>
+  </div>
+  <hr>
+
+  <div id="about" class="container">
+    <h2>About Us</h2>
+    <p>Established in 2000, GCET is one of the leading engineering institutions in North India. We are committed to academic excellence and producing engineers who lead with ethics and innovation.</p>
+    <ul>
+      <li><strong>Accredited Excellence:</strong> NBA and NAAC A+ accredited programs with global recognition.</li>
+      <li><strong>Smart Infrastructure:</strong> Digital classrooms, AI labs, and a central library with 1 Lakh+ books and journals.</li>
+      <li><strong>Placement Record:</strong> 200+ companies visit yearly. Highest package: 1.5 Cr. Recruiters include Microsoft, Adobe, Goldman Sachs.</li>
+    </ul>
+  </div>
+  <hr>
+
+  <div id="programs" class="container">
+    <h2>Programs Offered</h2>
+    <p>GCET offers industry-focused B.Tech programs designed for the future of technology:</p>
+    <ul>
+      <li>B.Tech Computer Science & Engineering</li>
+      <li>B.Tech CSE - Artificial Intelligence & Machine Learning</li>
+      <li>B.Tech CSE - Data Science</li>
+      <li>B.Tech Information Technology</li>
+      <li>B.Tech Electronics & Communication Engineering</li>
+      <li>B.Tech Artificial Intelligence</li>
+      <li>B.Tech Mechanical Engineering</li>
+      <li>B.Tech Civil Engineering</li>
+      <li>B.Tech Electrical Engineering</li>
+    </ul>
+  </div>
+  <hr>
+
+  <div id="faculty" class="container">
+    <h2>Our Faculty</h2>
+    <p>Our faculty are the backbone of GCET. They are researchers, mentors, and industry experts dedicated to your success.</p>
+    <ul>
+      <li><strong>PhD Scholars:</strong> 80% of faculty hold PhD degrees from IITs, NITs, and foreign universities.</li>
+      <li><strong>Industry Connect:</strong> Regular guest lectures and workshops by experts from Google, Amazon, and startups.</li>
+      <li><strong>Mentorship:</strong> 1:15 Mentor-Mentee ratio for personalized academic and career guidance.</li>
+      <li><strong>Research Output:</strong> 200+ papers published in IEEE, Springer, and Scopus journals in last 2 years.</li>
+    </ul>
+  </div>
+  
+  <footer id="contact">
+    <p><strong>Information Technology Department - GCET</strong></p>
+    <p>Email: <a href="mailto:it@gcet.ac.in">it@gcet.ac.in</a> | Phone: <a href="tel:+911202321000">+91-120-232-1000</a></p>
+    <p>Address: Knowledge Park-II, Greater Noida, UP - 201310</p>
+  </footer>
+
+</body>
+</html>
